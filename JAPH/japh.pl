@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 
-use strict;
-use warnings;
+use 5.016;
+use DateTime;
 
-print "Just another Perl hacker\n";
+my @phrase =  qw/another Perl Just hacker/[split '', DateTime->now->year()]; # only works this year!
+say join ' ', @phrase;
